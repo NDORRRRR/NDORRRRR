@@ -8,7 +8,7 @@ This is a **code-generated GIF**, not an AI-generated image. It works inside Git
 
 To edit the animated banner:
 
-- Open `generate_banner.py`. Change `NAME_FIRST`, `NAME_LAST`, `ROLE`, `SCENES`, or `COLORS` at the top.
+- Open `generate_banner.py`. Change `NAME_FIRST`, `NAME_LAST`, `ROLE`, `EDUCATION`, `SCENES`, or `COLORS` at the top.
 - Install Python 3 and Pillow: `python -m pip install pillow`.
 - Run `python generate_banner.py` from this folder.
 - Commit the newly generated `assets/dev-terminal.gif` to the profile repository.

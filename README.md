@@ -1,10 +1,12 @@
 <div align="center">
-  <img src="./assets/dev-terminal.gif" alt="Adhim Musafak. Animated terminal showing web, mobile, and backend projects." width="100%" />
+  <img src="./assets/dev-terminal.gif" alt="Adhim Musafak, Informatics Engineering student at State University of Surabaya. Animated developer terminal." width="100%" />
 </div>
 
 <br>
 
 ### About
+
+**Informatics Engineering Student at State University of Surabaya**
 
 I work on web and mobile applications, from the interface to the API. Currently focused on **JagaTani** and its Flutter/backend integration.
 

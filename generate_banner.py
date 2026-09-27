@@ -19,11 +19,13 @@ NAME_FIRST = "Adhim"
 NAME_LAST = "Musafak."
 ROLE = "MOBILE  /  WEB  /  BACKEND"
 DESCRIPTION = "Building apps, interfaces and the APIs behind them."
+EDUCATION = "Informatics Engineering Student at State University of Surabaya"
 LOCATION = "GRESIK, INDONESIA"
 CURRENT_PROJECT = "JAGATANI"
 PROMPT = "adhim@dev ~ % "
 SCENES = [
     ("cat about.txt", ["web / mobile / APIs", "Flutter  |  React  |  Python"]),
+    ("cat education.txt", ["Informatics Engineering Student", "State University of Surabaya"]),
     ("ls projects/", ["JagaTani     UrbanMotion", "SakuMahasiswa"]),
     ("cat now.txt", ["Current focus: JagaTani", "Flutter + Python integration"]),
 ]
@@ -41,7 +43,7 @@ COLORS = {
 }
 WIDTH, HEIGHT = 1200, 328
 FPS = 12
-SCENE_FRAMES = 46  # 3 scenes * 46 frames = 11.5s, loops continuously
+SCENE_FRAMES = 46  # Four scenes; loops continuously
 # ----------------------------------------------------------------------
 
 FONT_DIR = Path("/usr/share/fonts/opentype/inter")
@@ -68,6 +70,7 @@ def system_font(paths, size):
 f_name = system_font([FONT_DIR / "InterDisplay-Bold.otf", WINDOWS_FONTS / "segoeuib.ttf", MAC_FONTS / "Helvetica.ttc", MONO_DIR / "DejaVuSans-Bold.ttf"], 66)
 f_role = system_font([MONO_DIR / "DejaVuSansMono.ttf", WINDOWS_FONTS / "consola.ttf", MAC_FONTS / "Menlo.ttc"], 15)
 f_tag = system_font([MONO_DIR / "DejaVuSansMono.ttf", WINDOWS_FONTS / "consola.ttf", MAC_FONTS / "Menlo.ttc"], 11)
+f_education = system_font([FONT_DIR / "Inter-Regular.otf", WINDOWS_FONTS / "segoeui.ttf", MAC_FONTS / "Helvetica.ttc", MONO_DIR / "DejaVuSans.ttf"], 13)
 f_desc = system_font([FONT_DIR / "Inter-Regular.otf", WINDOWS_FONTS / "segoeui.ttf", MAC_FONTS / "Helvetica.ttc", MONO_DIR / "DejaVuSans.ttf"], 15)
 f_code = system_font([MONO_DIR / "DejaVuSansMono.ttf", WINDOWS_FONTS / "consola.ttf", MAC_FONTS / "Menlo.ttc"], 16)
 f_code_small = system_font([MONO_DIR / "DejaVuSansMono.ttf", WINDOWS_FONTS / "consola.ttf", MAC_FONTS / "Menlo.ttc"], 12)
@@ -95,6 +98,8 @@ def base_image():
     d.text((50, 151), NAME_LAST, font=f_name, fill=C["red"])
     d.text((55, 230), ROLE, font=f_role, fill=C["yellow"])
     d.text((55, 259), DESCRIPTION, font=f_desc, fill=C["soft"])
+    d.line((55, 286, 505, 286), fill=C["border"], width=1)
+    d.text((55, 291), EDUCATION, font=f_education, fill=C["yellow"])
 
     # Right panel, handcrafted terminal window.
     tx0, ty0, tx1, ty1 = (619, 29, 1155, 289)
@@ -153,7 +158,7 @@ def scene_frame(scene_idx, frame_idx):
 
 def export():
     frames = [scene_frame(s, t) for s in range(len(SCENES)) for t in range(SCENE_FRAMES)]
-    preview = scene_frame(2, 29)
+    preview = scene_frame(1, 32)
     preview.save(OUT / "preview.png")
     # Deterministic palette and adaptive optimization keep GIF small.
     frames[0].save(
