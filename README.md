@@ -18,7 +18,7 @@
 `swe` · `web` · `mobile` · `backend`
 
 <img
-  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=16&duration=3000&pause=1200&color=F0D58A&center=true&vCenter=true&width=460&height=35&lines=hey%2C+welcome+to+my+github.;currently+working+on+JagaTani.;probably+debugging+something."
+  src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=16&duration=3000&pause=1200&color=F0D58A&center=true&vCenter=true&width=460&height=35&lines=hey%2C+welcome+to+my+github.;currently+Informatics Engineering Student at State University of Surabaya.;probably+debugging+something."
   alt="Typing animation"
 />
 
